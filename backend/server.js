@@ -6,4 +6,6 @@ require('./Routes/index')(app); // <--- basta adicionar essa linha
 
 app.use(cors());
 app.use(express.json());
-app.listen(3334);
+app.listen(3001, 'localhost', function() {
+  console.log("... port %d in %s mode", app.address().port, app.settings.env);
+});
